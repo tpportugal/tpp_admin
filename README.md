@@ -67,6 +67,20 @@ A aplicação da [Sentry](https://sentry.io), `Raven` já se encontra instalada,
 export SENTRY_DNS=vosso_dsn
 ```
 
+### Importar todos os distritos de Portugal
+
+Para importarem todos os distritos corram este comando:
+```
+docker-compose... python manage.py import_districts
+```
+
+### Importar todos os concelhos de Portugal
+
+Para importarem todos os concelhos corram este comando:
+```
+docker-compose... python manage.py import_counties
+```
+
 ### Saída de dados
 
 #### Visão geral da API
