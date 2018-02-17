@@ -11,4 +11,3 @@ class Place(models.Model):
     slug = SlugField()
     name = CharField(max_length=50)
     county = ForeignKey(County, models.DO_NOTHING, related_name='counties')
-

@@ -11,12 +11,12 @@ class StoptimeType(DjangoObjectType):
 
 class Query(object):
     stoptime = graphene.Field(StoptimeType,
-                          id=graphene.Int(),
-                          trip__pk=graphene.Int(),
-                          stop__pk=graphene.Int(),
-                          stop__sequence=graphene.Int(),
-                          arrival_time=graphene.String(),
-                          departure_time=graphene.String())
+                              id=graphene.Int(),
+                              trip__pk=graphene.Int(),
+                              stop__pk=graphene.Int(),
+                              stop__sequence=graphene.Int(),
+                              arrival_time=graphene.String(),
+                              departure_time=graphene.String())
 
     stoptimes = graphene.List(StoptimeType)
 

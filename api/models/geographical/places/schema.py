@@ -11,10 +11,10 @@ class PlaceType(DjangoObjectType):
 
 class Query(object):
     place = graphene.Field(PlaceType,
-                          id=graphene.Int(),
-                          slug=graphene.String(),
-                          name=graphene.String(),
-                          county__slug=graphene.String())
+                           id=graphene.Int(),
+                           slug=graphene.String(),
+                           name=graphene.String(),
+                           county__slug=graphene.String())
 
     places = graphene.List(PlaceType)
 

@@ -11,11 +11,11 @@ class AgencyType(DjangoObjectType):
 
 class Query(object):
     agency = graphene.Field(AgencyType,
-                          id=graphene.Int(),
-                          slug=graphene.String(),
-                          name=graphene.String(),
-                          url=graphene.String(),
-                          timezone=graphene.String())
+                            id=graphene.Int(),
+                            slug=graphene.String(),
+                            name=graphene.String(),
+                            url=graphene.String(),
+                            timezone=graphene.String())
 
     agencies = graphene.List(AgencyType)
 

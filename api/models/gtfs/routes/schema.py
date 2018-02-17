@@ -11,11 +11,11 @@ class RouteType(DjangoObjectType):
 
 class Query(object):
     route = graphene.Field(RouteType,
-                          id=graphene.Int(),
-                          short_name=graphene.String(),
-                          long_name=graphene.String(),
-                          type=graphene.Int(),
-                          agency__slug=graphene.String())
+                           id=graphene.Int(),
+                           short_name=graphene.String(),
+                           long_name=graphene.String(),
+                           type=graphene.Int(),
+                           agency__slug=graphene.String())
 
     routes = graphene.List(RouteType)
 

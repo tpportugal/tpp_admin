@@ -11,10 +11,10 @@ class CountyType(DjangoObjectType):
 
 class Query(object):
     county = graphene.Field(CountyType,
-                          id=graphene.Int(),
-                          slug=graphene.String(),
-                          name=graphene.String(),
-                          district__slug=graphene.String())
+                            id=graphene.Int(),
+                            slug=graphene.String(),
+                            name=graphene.String(),
+                            district__slug=graphene.String())
 
     counties = graphene.List(CountyType)
 

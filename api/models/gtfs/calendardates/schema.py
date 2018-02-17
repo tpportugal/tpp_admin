@@ -11,10 +11,10 @@ class CalendarDateType(DjangoObjectType):
 
 class Query(object):
     calendardate = graphene.Field(CalendarDateType,
-                          id=graphene.Int(),
-                          service__pk=graphene.Int(),
-                          date=graphene.String(),
-                          exception_type=graphene.Int())
+                                  id=graphene.Int(),
+                                  service__pk=graphene.Int(),
+                                  date=graphene.String(),
+                                  exception_type=graphene.Int())
 
     calendardates = graphene.List(CalendarDateType)
 

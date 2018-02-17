@@ -11,16 +11,16 @@ class ServiceType(DjangoObjectType):
 
 class Query(object):
     service = graphene.Field(ServiceType,
-                            id=graphene.Int(),
-                            monday=graphene.Int(),
-                            tuesday=graphene.Int(),
-                            wednesday=graphene.Int(),
-                            thursday=graphene.Int(),
-                            friday=graphene.Int(),
-                            saturday=graphene.Int(),
-                            sunday=graphene.Int(),
-                            start_date=graphene.String(),
-                            end_date=graphene.String())
+                             id=graphene.Int(),
+                             monday=graphene.Int(),
+                             tuesday=graphene.Int(),
+                             wednesday=graphene.Int(),
+                             thursday=graphene.Int(),
+                             friday=graphene.Int(),
+                             saturday=graphene.Int(),
+                             sunday=graphene.Int(),
+                             start_date=graphene.String(),
+                             end_date=graphene.String())
 
     services = graphene.List(ServiceType)
 
