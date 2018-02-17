@@ -1,4 +1,5 @@
 import graphene
+from graphene import Node
 from graphene_django import DjangoObjectType
 
 from .models import County
@@ -7,6 +8,7 @@ from .models import County
 class CountyType(DjangoObjectType):
     class Meta:
         model = County
+        interfaces = (Node,)
 
 
 class Query(object):

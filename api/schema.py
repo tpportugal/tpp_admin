@@ -22,7 +22,7 @@ class Query(DistrictSchema.Query,
             StopSchema.Query,
             TripSchema.Query,
             graphene.ObjectType):
-    debug = graphene.Field(DjangoDebug, name='__debug')
+    pass
 
 
 schema = graphene.Schema(query=Query)

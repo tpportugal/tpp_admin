@@ -110,7 +110,7 @@ REST_FRAMEWORK = {
 
 GRAPHENE = {
     'SCHEMA': 'api.schema.schema',
-    'SCHEMA_INDENT': 2,
+    'SCHEMA_INDENT': 3,
     'MIDDLEWARE': (
         'graphene_django.debug.DjangoDebugMiddleware',
     ),

@@ -1,4 +1,5 @@
 import graphene
+from graphene import Node
 from graphene_django import DjangoObjectType
 
 from .models import District
@@ -7,6 +8,7 @@ from .models import District
 class DistrictType(DjangoObjectType):
     class Meta:
         model = District
+        interfaces = (Node,)
 
 
 class Query(object):

@@ -1,4 +1,5 @@
 import graphene
+from graphene import Node
 from graphene_django import DjangoObjectType
 
 from .models import Place
@@ -7,6 +8,7 @@ from .models import Place
 class PlaceType(DjangoObjectType):
     class Meta:
         model = Place
+        interfaces = (Node,)
 
 
 class Query(object):
@@ -14,7 +16,7 @@ class Query(object):
                            id=graphene.Int(),
                            slug=graphene.String(),
                            name=graphene.String(),
-                           county__slug=graphene.String())
+                           coufnty__slug=graphene.String())
 
     places = graphene.List(PlaceType)
 

@@ -5,12 +5,13 @@ from django.template.defaultfilters import slugify
 
 from api.apps.geographical.districts.models import District
 from api.apps.geographical.counties.models import County
+from api.apps.geographical.places.models import Place
 
 from django.conf import settings
 
 
 class Command(BaseCommand):
-    help = "Importa todos os concelhos do ficheiro (vendors/centraldedados/codigos_postais/data/concelhos.csv) para o modelo (County)"
+    help = "Importa todas localidades do ficheiro (vendors/centraldedados/codigos_postais/data/codigos_postais.csv) para o modelo (Place)"
 
     def handle(self, *args, **options):
         """
@@ -24,7 +25,7 @@ class Command(BaseCommand):
                                  "centraldedados",
                                  "codigos_postais",
                                  "data",
-                                 "concelhos.csv")
+                                 "codigos_postais.csv")
 
         """
         Os reguladoras servem para identificar tipo de dados num conjunto de dados e 
@@ -36,20 +37,24 @@ class Command(BaseCommand):
                 "pos": 0,
                 "type": int
             },
-            "id": {
+            "county__id": {
                 "pos": 1,
                 "type": str
             },
-            "name": {
+            "id": {
                 "pos": 2,
+                "type": int
+            },
+            "name": {
+                "pos": 3,
                 "type": str
             }
         }
 
         """
-        Remover os dados do modelo County
+        Remover os dados do modelo Place
         """
-        County.objects.all().delete()
+        Place.objects.all().delete()
 
         """
         Iteração sobre os dados do CSV
@@ -58,22 +63,33 @@ class Command(BaseCommand):
             next(f)  # Ignore first line (header)
             reader = csv.reader(f)
             count = 0
+            _places = {}
             for row in list(reader):
                 # Identificação dos dados
                 district__id = row[regulators["district__id"]["pos"]]
+                county__id = row[regulators["county__id"]["pos"]]
                 id = row[regulators["id"]["pos"]]
                 name = row[regulators["name"]["pos"]]
                 # Conversão dos dados
                 district__id = regulators["district__id"]["type"](district__id)
+                county__id = regulators["county__id"]["type"](county__id)
                 id = regulators["id"]["type"](id)
                 name = regulators["name"]["type"](name)
-                # Concatenação do district_id com o id para gerar um id único
-                id = int(str(district__id) + str(id))
-                county = County()
-                county.id = id
-                county.slug = slugify(name)
-                county.name = name
-                county.district = District.objects.get(id=district__id)
-                county.save()
+                # Concatenação do district_id com o county__id para gerar um id único
+                county__id = int(str(district__id) + str(county__id))
+                _places[id] = [district__id, county__id, id, name]
+
+            for k, row in _places.items():
+                # Identificação dos dados
+                district__id = row[regulators["district__id"]["pos"]]
+                county__id = row[regulators["county__id"]["pos"]]
+                id = row[regulators["id"]["pos"]]
+                name = row[regulators["name"]["pos"]]
+                place = Place()
+                place.id = id
+                place.slug = slugify(name)
+                place.name = name
+                place.county = County.objects.get(id=county__id)
+                place.save()
                 count += 1
-            print("A importação dos concelhos foi realizada com sucesso: {0} concelhos importados".format(count))
+            print("A importação das localidades foi realizada com sucesso: {0} localidades importados".format(count))
