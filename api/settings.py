@@ -9,6 +9,7 @@ DEBUG = False
 ALLOWED_HOSTS = ['tpp.pt', 'www.tpp.pt']
 
 INSTALLED_APPS = (
+    'raven.contrib.django.raven_compat',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -118,3 +119,9 @@ CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
 CELERYBEAT_SCHEDULE = {}
 CELERY_TIMEZONE = 'Europe/Lisbon'
+
+
+RAVEN_CONFIG = {
+    'dsn': os.environ.get('SENTRY_DNS', ''),
+}
+

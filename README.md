@@ -58,6 +58,15 @@ bash start_development.sh
 
 Depois de o projecto estar construído e a correr, podem aceder à aplicação usando uns dos endereços dados no tópico *Saída de dados*:
 
+### Error logging
+
+Para captarem os erros do projeto, recomendamos que utilizem o serviço **Sentry**.
+A aplicação da [Sentry](https://sentry.io), `Raven` já  se encontra instalada, basta definirem a seguinte Environment variable (variável do ambiente) com o vosso DSN:
+- **Atenção**: apenas se encontra configurado para **production**
+```
+docker-compose run --rm web export SENTRY_DNS=vosso_dsn
+```
+
 ### Saída de dados
 
 #### Visão geral da API
