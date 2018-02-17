@@ -1,7 +1,7 @@
 from django.db import models
 from django.db.models import ForeignKey, IntegerField, DateField
 
-from api.models.gtfs.services.models import Service
+from api.apps.gtfs.services.models import Service
 
 
 class CalendarDate(models.Model):

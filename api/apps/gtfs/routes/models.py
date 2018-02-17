@@ -1,7 +1,7 @@
 from django.db import models
 from django.db.models import CharField, ForeignKey, IntegerField
 
-from api.models.gtfs.agencies.models import Agency
+from api.apps.gtfs.agencies.models import Agency
 
 
 class Route(models.Model):

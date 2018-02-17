@@ -1,8 +1,8 @@
 from django.db import models
 from django.db.models import ForeignKey
 
-from api.models.gtfs.routes.models import Route
-from api.models.gtfs.calendardates.models import CalendarDate
+from api.apps.gtfs.routes.models import Route
+from api.apps.gtfs.calendardates.models import CalendarDate
 
 
 class Trip(models.Model):

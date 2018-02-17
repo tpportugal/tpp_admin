@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
-from api.models.gdrive.forms import TimetableForm
+from api.apps.gdrive.forms import TimetableForm
 
 
 def upload_timetable(request):

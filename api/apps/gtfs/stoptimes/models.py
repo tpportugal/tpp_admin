@@ -1,8 +1,8 @@
 from django.db import models
 from django.db.models import ForeignKey, PositiveIntegerField, TimeField
 
-from api.models.gtfs.stops.models import Stop
-from api.models.gtfs.trips.models import Trip
+from api.apps.gtfs.stops.models import Stop
+from api.apps.gtfs.trips.models import Trip
 
 
 class Stoptime(models.Model):

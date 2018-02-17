@@ -1,7 +1,7 @@
 from django.db import models
 from django.db.models import CharField, DecimalField, ForeignKey
 
-from api.models.geographical.places.models import Place
+from api.apps.geographical.places.models import Place
 
 
 class Stop(models.Model):

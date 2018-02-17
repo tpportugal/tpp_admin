@@ -1,7 +1,7 @@
 from django.db import models
 from django.db.models import SlugField, CharField, ForeignKey
 
-from api.models.geographical.counties.models import County
+from api.apps.geographical.counties.models import County
 
 
 class Place(models.Model):

@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from api.models.gdrive.models import Timetable
+from api.apps.gdrive.models import Timetable
 
 
 @admin.register(Timetable)
