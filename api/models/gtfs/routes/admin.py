@@ -5,4 +5,4 @@ from .models import Route
 
 @admin.register(Route)
 class RouteAdmin(admin.ModelAdmin):
-    list_display = ['short_name', 'long_name', 'type', 'agency']
+    list_display = ['short_name', 'long_name', 'transport_type', 'agency']

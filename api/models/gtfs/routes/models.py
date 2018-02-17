@@ -24,7 +24,7 @@ class Route(models.Model):
 
     short_name = CharField(max_length=20, help_text="O campo de nome deve conter o nome curto da rota.")
     long_name = CharField(max_length=255, help_text="O campo de nome deve conter o nome longo da rota.")
-    type = IntegerField(help_text="O tipo de transporte usado na rota", choices=TYPES)
+    transport_type = IntegerField(help_text="O tipo de transporte usado na rota", choices=TYPES)
     agency = ForeignKey(Agency, models.DO_NOTHING, related_name='routes')
 
     def __str__(self):

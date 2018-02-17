@@ -14,7 +14,7 @@ class Query(object):
                            id=graphene.Int(),
                            short_name=graphene.String(),
                            long_name=graphene.String(),
-                           type=graphene.Int(),
+                           transport_type=graphene.Int(),
                            agency__slug=graphene.String())
 
     routes = graphene.List(RouteType)
@@ -23,7 +23,7 @@ class Query(object):
         id = kwargs.get('id')
         short_name = kwargs.get('short_name')
         long_name = kwargs.get('long_name')
-        transport_type = kwargs.get('type')
+        transport_type = kwargs.get('transport_type')
         agency_slug = kwargs.get('agency__slug')
 
         if id is not None:
@@ -36,7 +36,7 @@ class Query(object):
             return Route.objects.get(long_name=long_name)
 
         if transport_type is not None:
-            return Route.objects.get(type=transport_type)
+            return Route.objects.get(transport_type=transport_type)
 
         if agency_slug is not None:
             return Route.objects.get(agency__slug=agency_slug)
