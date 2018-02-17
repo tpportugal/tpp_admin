@@ -11,7 +11,7 @@ from django.conf import settings
 
 
 class Command(BaseCommand):
-    help = "Importa todas localidades do ficheiro (vendors/centraldedados/codigos_postais/data/codigos_postais.csv) para o modelo (Place)"
+    help = "Importa todas localidades do ficheiro (vendors/tpp-data/localidades.csv) para o modelo (Place)"
 
     def handle(self, *args, **options):
         """
@@ -22,10 +22,8 @@ class Command(BaseCommand):
                                  settings.BASE_DIR,
                                  "api",
                                  "vendors",
-                                 "centraldedados",
-                                 "codigos_postais",
-                                 "data",
-                                 "codigos_postais.csv")
+                                 "tpp-data",
+                                 "localidades.csv")
 
         """
         Os reguladoras servem para identificar tipo de dados num conjunto de dados e 

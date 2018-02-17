@@ -10,7 +10,7 @@ from django.conf import settings
 
 
 class Command(BaseCommand):
-    help = "Importa todos os concelhos do ficheiro (vendors/centraldedados/codigos_postais/data/concelhos.csv) para o modelo (County)"
+    help = "Importa todos os concelhos do ficheiro (vendors/tpp-data/concelhos.csv) para o modelo (County)"
 
     def handle(self, *args, **options):
         """
@@ -21,9 +21,7 @@ class Command(BaseCommand):
                                  settings.BASE_DIR,
                                  "api",
                                  "vendors",
-                                 "centraldedados",
-                                 "codigos_postais",
-                                 "data",
+                                 "tpp-data",
                                  "concelhos.csv")
 
         """

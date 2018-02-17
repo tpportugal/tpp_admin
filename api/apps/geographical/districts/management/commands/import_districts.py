@@ -8,7 +8,7 @@ from django.conf import settings
 
 
 class Command(BaseCommand):
-    help = "Importa todos os distritos do ficheiro (vendors/centraldedados/codigos_postais/data/distritos.csv) para o modelo (Districts)"
+    help = "Importa todos os distritos do ficheiro (vendors/tpp-data/distritos.csv) para o modelo (Districts)"
 
     def handle(self, *args, **options):
         """
@@ -19,9 +19,7 @@ class Command(BaseCommand):
                                  settings.BASE_DIR,
                                  "api",
                                  "vendors",
-                                 "centraldedados",
-                                 "codigos_postais",
-                                 "data",
+                                 "tpp-data",
                                  "distritos.csv")
 
         """
