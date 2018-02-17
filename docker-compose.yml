@@ -36,6 +36,8 @@ services:
       - db
     links:
       - redis
+    environment:
+     DJANGO_SETTINGS_MODULE: api.settings
     restart: always
   redis:
     image: redis:3.2-alpine
