@@ -1,5 +1,5 @@
 from django.db import models
-from django.db.models import BinaryField, DateField
+from django.db.models import SmallIntegerField, DateField
 
 
 class Service(models.Model):
@@ -9,12 +9,12 @@ class Service(models.Model):
     Equivale ao services.txt num feed GTFS
     """
 
-    monday = BinaryField(default=0)
-    tuesday = BinaryField(default=0)
-    wednesday = BinaryField(default=0)
-    thursday = BinaryField(default=0)
-    friday = BinaryField(default=0)
-    saturday = BinaryField(default=0)
-    sunday = BinaryField(default=0)
+    monday = SmallIntegerField(default=0)
+    tuesday = SmallIntegerField(default=0)
+    wednesday = SmallIntegerField(default=0)
+    thursday = SmallIntegerField(default=0)
+    friday = SmallIntegerField(default=0)
+    saturday = SmallIntegerField(default=0)
+    sunday = SmallIntegerField(default=0)
     start_date = DateField()
     end_date = DateField()
