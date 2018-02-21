@@ -3,8 +3,8 @@ from django.db import models
 from api.apps.gtfs.agencies.models import Agency
 
 
-def timetable_file_path(instance):
-    return 'maps/{0}'.format(instance.agency.slug)
+def timetable_file_path(instance, filename):
+    return 'maps/{0}/{1}'.format(instance.agency.slug, filename)
 
 
 class Timetable(models.Model):
