@@ -191,3 +191,6 @@ background_worker/*.ipynb
 
 credentials.json
 maps/*
+
+static/
+data/
