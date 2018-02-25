@@ -2,7 +2,7 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SECRET_KEY = 'v1)g@8)7t&vj#q24yx8d+m3&v&emz&6u9f9g9mol96j8i7q_z0'
+SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
 
 DEBUG = True
 GRAPHQL_EDITOR = True
@@ -89,7 +89,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-pt'
 
 TIME_ZONE = 'UTC'
 
@@ -134,3 +134,5 @@ def custom_show_toolbar(request):
 DEBUG_TOOLBAR_CONFIG = {
     'SHOW_TOOLBAR_CALLBACK': custom_show_toolbar,
 }
+
+NOMINATIM_ENDPOINT = os.environ['NOMINATIM_ENDPOINT']

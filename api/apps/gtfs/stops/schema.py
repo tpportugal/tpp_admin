@@ -14,8 +14,7 @@ class Query(object):
                           id=graphene.Int(),
                           name=graphene.String(),
                           latitude=graphene.Float(),
-                          longitude=graphene.Float(),
-                          place__slug=graphene.String())
+                          longitude=graphene.Float())
 
     stops = graphene.List(StopType)
 
@@ -24,7 +23,6 @@ class Query(object):
         name = kwargs.get('name')
         latitude = kwargs.get('latitude')
         longitude = kwargs.get('longitude')
-        place_slug = kwargs.get('place__slug')
 
         if id is not None:
             return Stop.objects.get(pk=id)
@@ -37,9 +35,6 @@ class Query(object):
 
         if longitude is not None:
             return Stop.objects.get(longitude=longitude)
-
-        if place_slug is not None:
-            return Stop.objects.get(place__slug=place_slug)
 
         return None
 

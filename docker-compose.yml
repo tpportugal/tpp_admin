@@ -26,9 +26,8 @@ services:
       - db
     links:
       - redis
-    environment:
-     DJANGO_SETTINGS_MODULE: api.settings
-     SENTRY_DSN: ${SENTRY_DSN}
+    env_file:
+      - .env/production.env
     restart: always
   celery:
     hostname: celery
@@ -40,9 +39,8 @@ services:
       - db
     links:
       - redis
-    environment:
-     DJANGO_SETTINGS_MODULE: api.settings
-     SENTRY_DSN: ${SENTRY_DSN}
+    env_file:
+      - .env/production.env
     restart: always
   redis:
     image: redis:3.2-alpine
