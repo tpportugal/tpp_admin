@@ -6,7 +6,7 @@ SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['tpp.pt', 'www.tpp.pt']
+ALLOWED_HOSTS = ['admin.tpp.pt']
 
 INSTALLED_APPS = (
     'raven.contrib.django.raven_compat',
