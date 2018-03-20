@@ -8,9 +8,9 @@ from api.apps.gdrive.views import upload_timetable
 
 
 urlpatterns = [
-    url(r'^$', RedirectView.as_view(url='/mvp', permanent=False)),
+    #url(r'^$', RedirectView.as_view(url='/mvp', permanent=False)),
     url(r'^api/', GraphQLView.as_view(graphiql=getattr(settings, "GRAPHQL_EDITOR", False))),
-    url(r'^admin/', admin.site.urls),
+    url(r'^$/', admin.site.urls),
     url(r'^upload/', upload_timetable),
 ]
 
