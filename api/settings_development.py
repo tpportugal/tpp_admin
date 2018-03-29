@@ -134,5 +134,3 @@ def custom_show_toolbar(request):
 DEBUG_TOOLBAR_CONFIG = {
     'SHOW_TOOLBAR_CALLBACK': custom_show_toolbar,
 }
-
-NOMINATIM_ENDPOINT = os.environ['NOMINATIM_ENDPOINT']

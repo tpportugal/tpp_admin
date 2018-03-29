@@ -124,5 +124,3 @@ CELERY_TIMEZONE = 'Europe/Lisbon'
 RAVEN_CONFIG = {
     'dsn': os.environ['DJANGO_SENTRY_DSN'],
 }
-
-NOMINATIM_ENDPOINT = os.environ['NOMINATIM_ENDPOINT']
