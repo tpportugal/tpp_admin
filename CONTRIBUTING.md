@@ -12,12 +12,12 @@ Todos os membros da nossa comunidade são obrigados a seguir o nosso [código de
 
 Abaixo estão algums recursos importantes para quem começa:
 
- - [Conceito do TPP](https://github.com/glaand/tpp/wiki/TPP---Conceito)
- - [O nosso Roadmap](https://github.com/glaand/tpp/wiki/Roadmap)
+ - [Conceito do TPP](https://github.com/tpportugal/tpp/wiki/TPP---Conceito)
+ - [O nosso Roadmap](https://github.com/tpportugal/tpp/wiki/Roadmap)
 
 ## Contribuir no desenvolvimento
 
-Se quiseres mergulhar profundamente e ajudar com o desenvolvimento do TPP, instala primeiro o projeto localmente de acordo com o nosso [Guia de Instalação](https://github.com/glaand/tpp/blob/master/README.md). Depois disso, sugerimos que vejas os Issues no nosso [Issue Tracker](https://github.com/glaand/tpp/issues) que estejam marcados como `Good First Issue`. Estes Issues são ótimos para teres um começo suave e não te colocam em frente ás partes mais complexas do sistema.
+Se quiseres mergulhar profundamente e ajudar com o desenvolvimento do TPP, instala primeiro o projeto localmente de acordo com o nosso [Guia de Instalação](https://github.com/tpportugal/tpp/blob/master/README.md). Depois disso, sugerimos que vejas os Issues no nosso [Issue Tracker](https://github.com/glaand/tpp/issues) que estejam marcados como `Good First Issue`. Estes Issues são ótimos para teres um começo suave e não te colocam em frente ás partes mais complexas do sistema.
 
 Se quiseres trabalhar em tarefas mais desafiadoras, então segue os seguintes marcadores: `data`, `feature`, `bug`. Estes Issues têm uma visão geral e descrição do pretendido. Este tipo de Issues serão os ideais para começares. Dito isto, estes não são necessariamente os Issues mais fáceis.
 
@@ -41,7 +41,7 @@ Temos um ficheiro na raíz do projeto chamado `qa_check.sh`. Executa esse fichei
 
 ### Introdução dos teus dados no AUTHORS.md
 
-Se for o teu primeiro commit, adiciona o teu nome e contacto no ficheiro [AUTHORS.md](https://github.com/glaand/tpp/blob/master/AUTHORS.md)
+Se for o teu primeiro commit, adiciona o teu nome e contacto no ficheiro [AUTHORS.md](https://github.com/tpportugal/tpp/blob/master/AUTHORS.md)
 
 ---
 

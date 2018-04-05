@@ -1,10 +1,10 @@
 # TPP API
 #### Aplicação para unificar os transportes públicos de Portugal
 
-[![Guia de Contribuição](https://img.shields.io/badge/%E2%9D%A4-Guia%20de%20contribui%C3%A7%C3%A3o-blue.svg)](https://github.com/glaand/tpp/blob/master/CONTRIBUTING.md)
-[![Build Status](https://travis-ci.org/glaand/tpp.svg?branch=master)](https://travis-ci.org/glaand/tpp)
+[![Guia de Contribuição](https://img.shields.io/badge/%E2%9D%A4-Guia%20de%20contribui%C3%A7%C3%A3o-blue.svg)](https://github.com/tpportugal/tpp/blob/master/CONTRIBUTING.md)
+[![Build Status](https://travis-ci.org/tpportugal/tpp.svg?branch=master)](https://travis-ci.org/tpportugal/tpp)
 [![Canal de Comunicação](https://img.shields.io/badge/Canal%20de%20Comunica%C3%A7%C3%A3o-Slack-orange.svg)]((https://join.slack.com/t/tpportugal/shared_invite/enQtMzEwOTI3ODg0MDk2LTZmNjYxOWVmZTBkN2EwNWUzMGFhOGQ2MWM0YmQ4NGUxMTU1ZjcwMDQxMDljMzU0Njg0ODcwOGIyODUxMjIzNmI))
-[![Coverage Status](https://coveralls.io/repos/github/glaand/tpp/badge.svg?branch=master)](https://coveralls.io/github/glaand/tpp?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/tpportugal/tpp/badge.svg?branch=master)](https://coveralls.io/github/tpportugal/tpp?branch=master)
 
 ***
 
@@ -36,10 +36,10 @@ Sigam as instruções de comandos dadas abaixo:
 
 ```
 # SSH
-git clone --recurse-submodules git@github.com:glaand/tpp.git
+git clone --recurse-submodules git@github.com:tpportugal/tpp.git
 # ou
 #HTTPS
-git clone --recurse-submodules https://github.com/glaand/tpp.git
+git clone --recurse-submodules https://github.com/tpportugal/tpp.git
 ```
 - Entrem na pasta `tpp` e executem o script `set_deployment.sh`, da seguinte forma:
 
