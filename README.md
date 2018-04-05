@@ -58,6 +58,14 @@ bash start_development.sh
 
 Depois de o projecto estar construído e a correr, podem aceder à aplicação usando uns dos endereços dados no tópico *Saída de dados*:
 
+### Criação de utilizador
+
+Para aceder a plataforma em ambiente de desenvolvimento, é necessário criar primeiro um _superuser_, para tal basta executar o seguinte commando:
+
+```
+bash create_superuser.sh
+```
+
 ### Error logging
 
 Para captarem os erros do projeto, recomendamos que utilizem o serviço **Sentry**.
