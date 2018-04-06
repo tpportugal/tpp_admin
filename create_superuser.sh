@@ -17,7 +17,7 @@ while getopts ":f:pd" opt; do
     f) FILE=$OPTARG ;;
     :)
     case $OPTARG in 
-        f) echo "Option -$OPTARG requires configue .yml filepath." 
+        f) echo "Option -$OPTARG requires config .yml filepath." 
         exit 1 ;;
     esac    
   esac
