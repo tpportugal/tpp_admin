@@ -2,7 +2,7 @@
 
 :+1: :tada: Primeiramente, um grande obrigado pela tua contribuição com o teu tempo! :tada: :+1:
 
-Se ainda não te juntaste ao nosso canal de comunicação Slack, poderás fazê-lo [aqui!](https://join.slack.com/t/tpportugal/shared_invite/enQtMzEwOTI3ODg0MDk2LTZmNjYxOWVmZTBkN2EwNWUzMGFhOGQ2MWM0YmQ4NGUxMTU1ZjcwMDQxMDljMzU0Njg0ODcwOGIyODUxMjIzNmI)
+Se ainda não te juntaste ao nosso canal de comunicação Gitter, poderás fazê-lo [aqui!](https://gitter.im/tpportugal/Geral)
 
 Queremos que desenvolvas características do projeto que te entusiasmem!!!
 
